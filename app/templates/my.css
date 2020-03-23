@@ -1,0 +1,23 @@
+table{width:100%; border-collapse:collapse; front-family:'Helvetica', Arial, Lucida Grande, sans-serif; front-size:30px;}
+
+tr{background:light green;}
+th:active {
+    opacity:0.5;
+    border: 5 px solid red;
+   }
+
+tr:nth-child(event){background-color:yellow;
+    color:white;
+     padding:10px 20px;
+     }
+
+.sort_icon{width:14px;
+    height:8px;
+     margin-left:10px;
+     }
+
+.dir_item:hover{background-color:rgb(200, 221, 80);
+    color:rgb(32, 40, 50);
+    }
+
+

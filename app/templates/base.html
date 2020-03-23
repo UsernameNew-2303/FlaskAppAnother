@@ -1,0 +1,37 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - microblog</title>
+        {% else %}
+        <title>microblog</title>
+        {% endif %}
+        <script src="{{url_for('.static', filename='script/jquery-1.12.4.min.js')}}"></script>
+        <script type="text/javascript">
+            function create_folder(){
+                alert("test1");
+
+                $.post('/test',{}).done(function(JSON_file){alert(JSON_file);}).fail(function(){alert("Error");});
+        }
+
+        </script>
+
+    </head>
+    <body>
+        <div>
+            Microblog:
+            <a href="/index">Home</a>
+            <a href="/login">Login</a>
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </body>
+</html>
